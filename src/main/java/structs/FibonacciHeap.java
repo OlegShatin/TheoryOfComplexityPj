@@ -1,6 +1,6 @@
-package structs;
+package main.java.structs;
 /***********************************************************************
- * File: structs.FibonacciHeap.java
+ * File: main.java.structs.FibonacciHeap.java
  * Author: Keith Schwarz (htiek@cs.stanford.edu)
  *
  * An implementation of a priority queue backed by a Fibonacci heap,
@@ -197,11 +197,11 @@ public final class FibonacciHeap<T> {
      *
      * @param one The first Fibonacci heap to merge.
      * @param two The second Fibonacci heap to merge.
-     * @return A new structs.FibonacciHeap containing all of the elements of both
+     * @return A new main.java.structs.FibonacciHeap containing all of the elements of both
      * heaps.
      */
     public static <T> FibonacciHeap<T> merge(FibonacciHeap<T> one, FibonacciHeap<T> two) {
-        /* Create a new structs.FibonacciHeap to hold the result. */
+        /* Create a new main.java.structs.FibonacciHeap to hold the result. */
         FibonacciHeap<T> result = new FibonacciHeap<T>();
 
         /* Merge the two Fibonacci heap root lists together.  This helper function

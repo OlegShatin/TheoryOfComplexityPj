@@ -1,5 +1,7 @@
-import structs.BoundsGraphVertex;
-import structs.EuclidDirectedGraph;
+package main.java;
+
+import main.java.structs.BoundsGraphVertex;
+import main.java.structs.EuclidDirectedGraph;
 
 
 import java.util.ArrayList;

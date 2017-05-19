@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_60" class="java.beans.XMLDecoder">
+<java version="1.8.0_77" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
   <void method="add">
-   <object class="structs.BoundsGraphVertex">
+   <object class="main.java.structs.BoundsGraphVertex">
     <void property="name">
      <string>source</string>
     </void>
@@ -15,7 +15,7 @@
    </object>
   </void>
   <void method="add">
-   <object class="structs.BoundsGraphVertex">
+   <object class="main.java.structs.BoundsGraphVertex">
     <void property="marked">
      <boolean>true</boolean>
     </void>
@@ -31,7 +31,7 @@
    </object>
   </void>
   <void method="add">
-   <object class="structs.BoundsGraphVertex">
+   <object class="main.java.structs.BoundsGraphVertex">
     <void property="marked">
      <boolean>true</boolean>
     </void>
@@ -47,7 +47,7 @@
    </object>
   </void>
   <void method="add">
-   <object class="structs.BoundsGraphVertex">
+   <object class="main.java.structs.BoundsGraphVertex">
     <void property="marked">
      <boolean>true</boolean>
     </void>
@@ -65,6 +65,6 @@
  </object>
 </java>
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_60" class="java.beans.XMLDecoder">
+<java version="1.8.0_77" class="java.beans.XMLDecoder">
  <double>40.0</double>
 </java>

@@ -1,12 +1,11 @@
-/**
+package main.java; /**
  * @author Oleg Shatin
  * 11-501
  */
 
-import structs.BoundsGraphVertex;
-import structs.DirectedGraph;
-import structs.EuclidDirectedGraph;
-import structs.FibonacciHeap;
+import main.java.structs.BoundsGraphVertex;
+import main.java.structs.EuclidDirectedGraph;
+import main.java.structs.FibonacciHeap;
 
 import java.util.*;
 

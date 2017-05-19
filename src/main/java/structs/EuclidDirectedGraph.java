@@ -1,25 +1,34 @@
-package structs; /*****************************************************************************
- * File: structs.DirectedGraph.java
- * Author: Keith Schwarz (htiek@cs.stanford.edu)
- *
- * A class representing a directed graph where each edge has an associated
- * real-valued length.  Internally, the class is represented by an adjacency
- * list.
- */
-
-;
-
-import com.sun.xml.internal.txw2.annotation.XmlElement;
-
+package main.java.structs;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
-import java.util.*; // For HashMap
+import java.util.*;
+
+/**
+ * @author Oleg Shatin
+ *         11-501
+ */
 @XmlRootElement
-public class DirectedGraph<T> implements Iterable<T>, Serializable {
+public class EuclidDirectedGraph implements Iterable<BoundsGraphVertex>,Serializable {
+
+    public EuclidDirectedGraph(){
+
+    }
+
+
     /* A map from nodes in the graph to sets of outgoing edges.  Each
-     * set of edges is represented by a map from edges to doubles.
-     */
-    protected final Map<T, Map<T, Double>> mGraph = new HashMap<T, Map<T, Double>>();
+         * set of edges is represented by a map from edges to doubles.
+         */
+
+    public Map<BoundsGraphVertex, Map<BoundsGraphVertex, Double>> getMap() {
+        return mGraph;
+    }
+
+    public void setMap(Map<BoundsGraphVertex, Map<BoundsGraphVertex, Double>> mGraph) {
+        this.mGraph = mGraph;
+    }
+    @XmlElement
+    protected Map<BoundsGraphVertex, Map<BoundsGraphVertex, Double>> mGraph = new HashMap<BoundsGraphVertex, Map<BoundsGraphVertex, Double>>();
 
     /**
      * Adds a new node to the graph.  If the node already exists, this
@@ -28,13 +37,13 @@ public class DirectedGraph<T> implements Iterable<T>, Serializable {
      * @param node The node to add.
      * @return Whether or not the node was added.
      */
-    public boolean addNode(T node) {
+    public boolean addNode(BoundsGraphVertex node) {
         /* If the node already exists, don't do anything. */
         if (mGraph.containsKey(node))
             return false;
 
         /* Otherwise, add the node with an empty set of outgoing edges. */
-        mGraph.put(node, new HashMap<T, Double>());
+        mGraph.put(node, new HashMap<BoundsGraphVertex, Double>());
         return true;
     }
 
@@ -50,7 +59,7 @@ public class DirectedGraph<T> implements Iterable<T>, Serializable {
      * @throws NoSuchElementException If either the start or destination nodes
      *                                do not exist.
      */
-    public void addEdge(T start, T dest, double length) {
+    public void addEdge(BoundsGraphVertex start, BoundsGraphVertex dest, double length) {
         /* Confirm both endpoints exist. */
         if (!mGraph.containsKey(start) || !mGraph.containsKey(dest))
             throw new NoSuchElementException("Both nodes must be in the graph.");
@@ -67,10 +76,10 @@ public class DirectedGraph<T> implements Iterable<T>, Serializable {
      * exist, this throws a NoSuchElementException.
      *
      * @param start The start node.
-     * @param dest  The destination node.
+     * @param dest  BoundsGraphVertexhe destination node.
      * @throws NoSuchElementException If either node is not in the graph.
      */
-    public void removeEdge(T start, T dest) {
+    public void removeEdge(BoundsGraphVertex start, BoundsGraphVertex dest) {
         /* Confirm both endpoints exist. */
         if (!mGraph.containsKey(start) || !mGraph.containsKey(dest))
             throw new NoSuchElementException("Both nodes must be in the graph.");
@@ -86,9 +95,9 @@ public class DirectedGraph<T> implements Iterable<T>, Serializable {
      * @return An immutable view of the edges leaving that node.
      * @throws NoSuchElementException If the node does not exist.
      */
-    public Map<T, Double> edgesFrom(T node) {
+    public Map<BoundsGraphVertex, Double> edgesFrom(BoundsGraphVertex node) {
         /* Check that the node exists. */
-        Map<T, Double> arcs = mGraph.get(node);
+        Map<BoundsGraphVertex, Double> arcs = mGraph.get(node);
         if (arcs == null)
             throw new NoSuchElementException("Source node does not exist.");
 
@@ -100,7 +109,13 @@ public class DirectedGraph<T> implements Iterable<T>, Serializable {
      *
      * @return An iterator that traverses the nodes in the graph.
      */
-    public Iterator<T> iterator() {
+    public Iterator<BoundsGraphVertex> iterator() {
         return mGraph.keySet().iterator();
     }
+    public void addEuclidEdge(BoundsGraphVertex start, BoundsGraphVertex dest){
+        addEdge(start, dest, BoundsGraphVertex.distance(start, dest));
+    }
+
+
+
 }
