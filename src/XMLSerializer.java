@@ -10,11 +10,11 @@ import java.io.FileOutputStream;
  *         11-501
  */
 public class XMLSerializer {
-    public static void write(Object f, String filename) throws Exception{
+    public static void write(Object f, String filename, boolean addToFile) throws Exception{
         XMLEncoder encoder =
                 new XMLEncoder(
                         new BufferedOutputStream(
-                                new FileOutputStream(filename)));
+                                new FileOutputStream(filename, addToFile)));
         encoder.writeObject(f);
         encoder.close();
     }

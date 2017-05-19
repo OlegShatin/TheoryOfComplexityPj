@@ -1,34 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="1.8.0_60" class="java.beans.XMLDecoder">
- <object class="structs.EuclidDirectedGraph" id="EuclidDirectedGraph0">
-  <void property="map">
-   <void method="put">
-    <object class="structs.BoundsGraphVertex" id="BoundsGraphVertex0">
-     <void property="x">
-      <double>10.0</double>
-     </void>
-     <void property="y">
-      <double>10.0</double>
-     </void>
-    </object>
-    <object class="java.util.HashMap"/>
-   </void>
-   <void method="put">
-    <object class="structs.BoundsGraphVertex">
-     <void property="x">
-      <double>10.0</double>
-     </void>
-     <void property="y">
-      <double>10.0</double>
-     </void>
-    </object>
-    <object class="java.util.HashMap">
-     <void method="put">
-      <object idref="BoundsGraphVertex0"/>
-      <double>0.0</double>
-     </void>
-    </object>
-   </void>
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="structs.BoundsGraphVertex">
+    <void property="name">
+     <string>source</string>
+    </void>
+    <void property="x">
+     <double>10.0</double>
+    </void>
+    <void property="y">
+     <double>10.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="structs.BoundsGraphVertex">
+    <void property="marked">
+     <boolean>true</boolean>
+    </void>
+    <void property="name">
+     <string>secondNode</string>
+    </void>
+    <void property="x">
+     <double>10.0</double>
+    </void>
+    <void property="y">
+     <double>30.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="structs.BoundsGraphVertex">
+    <void property="marked">
+     <boolean>true</boolean>
+    </void>
+    <void property="name">
+     <string>thirdNode</string>
+    </void>
+    <void property="x">
+     <double>10.0</double>
+    </void>
+    <void property="y">
+     <double>40.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="structs.BoundsGraphVertex">
+    <void property="marked">
+     <boolean>true</boolean>
+    </void>
+    <void property="name">
+     <string>sink</string>
+    </void>
+    <void property="x">
+     <double>10.0</double>
+    </void>
+    <void property="y">
+     <double>50.0</double>
+    </void>
+   </object>
   </void>
  </object>
+</java>
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_60" class="java.beans.XMLDecoder">
+ <double>40.0</double>
 </java>
