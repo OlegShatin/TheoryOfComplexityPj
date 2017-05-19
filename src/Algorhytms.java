@@ -76,7 +76,7 @@ public class Algorhytms {
         return result;
     }
 
-    public static Double shortestEuclidDijkstraFibonacciPath(EuclidDirectedGraph graph, BoundsGraphVertex source,
+    public static  Double shortestEuclidDijkstraFibonacciPath(EuclidDirectedGraph graph, BoundsGraphVertex source,
                                                              BoundsGraphVertex sink, List<BoundsGraphVertex> resultStorage) {
         /* Create a Fibonacci heap storing the distances of unvisited nodes
          * from the source node.

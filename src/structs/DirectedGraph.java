@@ -7,13 +7,19 @@ package structs; /**************************************************************
  * list.
  */
 
-import java.util.*; // For HashMap
+;
 
-public class DirectedGraph<T> implements Iterable<T> {
+import com.sun.xml.internal.txw2.annotation.XmlElement;
+
+import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
+import java.util.*; // For HashMap
+@XmlRootElement
+public class DirectedGraph<T> implements Iterable<T>, Serializable {
     /* A map from nodes in the graph to sets of outgoing edges.  Each
      * set of edges is represented by a map from edges to doubles.
      */
-    private final Map<T, Map<T, Double>> mGraph = new HashMap<T, Map<T, Double>>();
+    protected final Map<T, Map<T, Double>> mGraph = new HashMap<T, Map<T, Double>>();
 
     /**
      * Adds a new node to the graph.  If the node already exists, this
@@ -52,6 +58,7 @@ public class DirectedGraph<T> implements Iterable<T> {
         /* Add the edge. */
         mGraph.get(start).put(dest, length);
     }
+
 
 
     /**
