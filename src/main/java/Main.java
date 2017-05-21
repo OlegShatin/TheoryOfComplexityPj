@@ -101,7 +101,7 @@ public class Main {
         }
 
         /*
-        * Second algorithm: for each source-sink pair get path using euclid heuristics
+        * Second algorithm: for each source get better sink
         * */
         minPath = null;
         minLength = Double.MAX_VALUE;
