@@ -51,7 +51,7 @@ public class Main {
             e.printStackTrace();
         }
         //check all vetexes from graph #1 was saved
-        for (BoundsGraphVertex vertex :graph2) {
+        for (BoundsGraphVertex vertex : graph2) {
             System.out.println(vertex.getX() + " " + vertex.getY());
         }
 
@@ -61,9 +61,9 @@ public class Main {
         ArrayList<BoundsGraphVertex> sources = new ArrayList<>();
         ArrayList<BoundsGraphVertex> sinks = new ArrayList<>();
         //get all sources and sinks
-        for (Map.Entry<BoundsGraphVertex, Map<BoundsGraphVertex, Double>> vertexEntry : graph.getMap().entrySet()){
+        for (Map.Entry<BoundsGraphVertex, Map<BoundsGraphVertex, Double>> vertexEntry : graph.getMap().entrySet()) {
             //if there are no edges from vertex then its sink
-            if (vertexEntry.getValue().isEmpty()){
+            if (vertexEntry.getValue().isEmpty()) {
                 sinks.add(vertexEntry.getKey());
             } else {
                 //mark all vertexes which have incoming edges
@@ -77,28 +77,45 @@ public class Main {
             if (!vertex.isMarked()) sources.add(vertex);
         }
 
-
+        /*
+        * First algorithm: for each source-sink pair get path using euclid heuristics
+        * */
         List<BoundsGraphVertex> minPath = null;
         Double minLength = Double.MAX_VALUE;
         for (BoundsGraphVertex source :
                 sources) {
-            for (BoundsGraphVertex sink:
-                 sinks) {
+            for (BoundsGraphVertex sink :
+                    sinks) {
                 //need use path storage list because algorhytm returns only double val of length.
                 //path will be saved in this storage.
                 List<BoundsGraphVertex> pathStorage = new ArrayList<>();
-                Double length = Algorhytms.shortestEuclidDijkstraFibonacciPath(graph, source, sink, pathStorage);
-                System.out.println("----");
-                for (BoundsGraphVertex vertex : pathStorage){
-
-                    System.out.println(vertex.getName());
-
-                }
-                if (minLength > length){
+                //do algo
+                Double length = Algorithms.shortestEuclidDijkstraFibonacciPathWithHeuristics(graph, source, sink, pathStorage, minLength);
+                //check min
+                if (minLength > length) {
                     minLength = length;
                     minPath = pathStorage;
                 }
 
+            }
+        }
+
+        /*
+        * Second algorithm: for each source-sink pair get path using euclid heuristics
+        * */
+        minPath = null;
+        minLength = Double.MAX_VALUE;
+        for (BoundsGraphVertex source :
+                sources) {
+            //need use path storage list because algorhytm returns only double val of length.
+            //path will be saved in this storage.
+            List<BoundsGraphVertex> pathStorage = new ArrayList<>();
+            //do algo
+            Double length = Algorithms.shortestEuclidDijkstraFibonacciPathToManySinks(graph, source, sinks, pathStorage, minLength);
+            //check min
+            if (minLength > length) {
+                minLength = length;
+                minPath = pathStorage;
             }
         }
         try {
@@ -107,7 +124,6 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
 
 
     }

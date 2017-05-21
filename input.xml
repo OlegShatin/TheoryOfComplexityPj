@@ -1,32 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_77" class="java.beans.XMLDecoder">
+<java version="1.8.0_60" class="java.beans.XMLDecoder">
  <object class="main.java.structs.EuclidDirectedGraph" id="EuclidDirectedGraph0">
   <void property="map">
    <void method="put">
     <object class="main.java.structs.BoundsGraphVertex" id="BoundsGraphVertex0">
      <void property="name">
-      <string>fiveNode - loop from second</string>
+      <string>sink</string>
      </void>
      <void property="x">
       <double>10.0</double>
      </void>
      <void property="y">
-      <double>60.0</double>
+      <double>50.0</double>
+     </void>
+    </object>
+    <object class="java.util.HashMap"/>
+   </void>
+   <void method="put">
+    <object class="main.java.structs.BoundsGraphVertex" id="BoundsGraphVertex1">
+     <void property="name">
+      <string>sixNode - loop from five</string>
+     </void>
+     <void property="x">
+      <double>10.0</double>
+     </void>
+     <void property="y">
+      <double>70.0</double>
      </void>
     </object>
     <object class="java.util.HashMap">
      <void method="put">
-      <object class="main.java.structs.BoundsGraphVertex" id="BoundsGraphVertex1">
+      <object class="main.java.structs.BoundsGraphVertex" id="BoundsGraphVertex2">
        <void property="name">
-        <string>sixNode - loop from five</string>
+        <string>sevenNode - loop from six to third</string>
        </void>
        <void property="x">
         <double>10.0</double>
        </void>
        <void property="y">
-        <double>70.0</double>
+        <double>80.0</double>
        </void>
       </object>
+      <double>10.0</double>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <object class="main.java.structs.BoundsGraphVertex" id="BoundsGraphVertex3">
+     <void property="name">
+      <string>thirdNode</string>
+     </void>
+     <void property="x">
+      <double>10.0</double>
+     </void>
+     <void property="y">
+      <double>40.0</double>
+     </void>
+    </object>
+    <object class="java.util.HashMap">
+     <void method="put">
+      <object idref="BoundsGraphVertex0"/>
       <double>10.0</double>
      </void>
     </object>
@@ -45,7 +78,7 @@
     </object>
     <object class="java.util.HashMap">
      <void method="put">
-      <object class="main.java.structs.BoundsGraphVertex" id="BoundsGraphVertex2">
+      <object class="main.java.structs.BoundsGraphVertex" id="BoundsGraphVertex4">
        <void property="name">
         <string>secondNode</string>
        </void>
@@ -61,76 +94,43 @@
     </object>
    </void>
    <void method="put">
-    <object class="main.java.structs.BoundsGraphVertex" id="BoundsGraphVertex3">
-     <void property="name">
-      <string>sevenNode - loop from six to third</string>
-     </void>
-     <void property="x">
-      <double>10.0</double>
-     </void>
-     <void property="y">
-      <double>80.0</double>
-     </void>
-    </object>
+    <object idref="BoundsGraphVertex4"/>
     <object class="java.util.HashMap">
      <void method="put">
-      <object class="main.java.structs.BoundsGraphVertex" id="BoundsGraphVertex4">
+      <object idref="BoundsGraphVertex3"/>
+      <double>10.0</double>
+     </void>
+     <void method="put">
+      <object class="main.java.structs.BoundsGraphVertex" id="BoundsGraphVertex5">
        <void property="name">
-        <string>thirdNode</string>
+        <string>fiveNode - loop from second</string>
        </void>
        <void property="x">
         <double>10.0</double>
        </void>
        <void property="y">
-        <double>40.0</double>
+        <double>60.0</double>
        </void>
       </object>
-      <double>40.0</double>
+      <double>30.0</double>
      </void>
     </object>
    </void>
    <void method="put">
-    <object class="main.java.structs.BoundsGraphVertex" id="BoundsGraphVertex5">
-     <void property="name">
-      <string>sink</string>
-     </void>
-     <void property="x">
+    <object idref="BoundsGraphVertex5"/>
+    <object class="java.util.HashMap">
+     <void method="put">
+      <object idref="BoundsGraphVertex1"/>
       <double>10.0</double>
      </void>
-     <void property="y">
-      <double>50.0</double>
-     </void>
     </object>
-    <object class="java.util.HashMap"/>
    </void>
    <void method="put">
     <object idref="BoundsGraphVertex2"/>
     <object class="java.util.HashMap">
      <void method="put">
-      <object idref="BoundsGraphVertex0"/>
-      <double>30.0</double>
-     </void>
-     <void method="put">
-      <object idref="BoundsGraphVertex4"/>
-      <double>10.0</double>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <object idref="BoundsGraphVertex4"/>
-    <object class="java.util.HashMap">
-     <void method="put">
-      <object idref="BoundsGraphVertex5"/>
-      <double>10.0</double>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <object idref="BoundsGraphVertex1"/>
-    <object class="java.util.HashMap">
-     <void method="put">
       <object idref="BoundsGraphVertex3"/>
-      <double>10.0</double>
+      <double>40.0</double>
      </void>
     </object>
    </void>
