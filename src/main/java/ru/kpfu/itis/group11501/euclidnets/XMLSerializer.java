@@ -1,4 +1,4 @@
-package main.java;
+package ru.kpfu.itis.group11501.euclidnets;
 
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;

@@ -1,7 +1,8 @@
-package main.java;
+package ru.kpfu.itis.group11501.euclidnets;
 
-import main.java.structs.BoundsGraphVertex;
-import main.java.structs.EuclidDirectedGraph;
+
+import ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex;
+import ru.kpfu.itis.group11501.euclidnets.structs.EuclidDirectedGraph;
 
 
 import java.util.ArrayList;

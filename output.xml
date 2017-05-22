@@ -2,7 +2,7 @@
 <java version="1.8.0_60" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
   <void method="add">
-   <object class="main.java.structs.BoundsGraphVertex">
+   <object class="ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex">
     <void property="name">
      <string>source</string>
     </void>
@@ -15,7 +15,7 @@
    </object>
   </void>
   <void method="add">
-   <object class="main.java.structs.BoundsGraphVertex">
+   <object class="ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex">
     <void property="marked">
      <boolean>true</boolean>
     </void>
@@ -31,7 +31,7 @@
    </object>
   </void>
   <void method="add">
-   <object class="main.java.structs.BoundsGraphVertex">
+   <object class="ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex">
     <void property="marked">
      <boolean>true</boolean>
     </void>
@@ -47,7 +47,7 @@
    </object>
   </void>
   <void method="add">
-   <object class="main.java.structs.BoundsGraphVertex">
+   <object class="ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex">
     <void property="marked">
      <boolean>true</boolean>
     </void>

@@ -1,11 +1,11 @@
-package main.java; /**
+package ru.kpfu.itis.group11501.euclidnets; /**
  * @author Oleg Shatin
  * 11-501
  */
 
-import main.java.structs.BoundsGraphVertex;
-import main.java.structs.EuclidDirectedGraph;
-import main.java.structs.FibonacciHeap;
+import ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex;
+import ru.kpfu.itis.group11501.euclidnets.structs.EuclidDirectedGraph;
+import ru.kpfu.itis.group11501.euclidnets.structs.FibonacciHeap;
 
 import java.util.*;
 
