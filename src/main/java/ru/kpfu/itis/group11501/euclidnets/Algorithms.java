@@ -219,6 +219,7 @@ public class Algorithms {
 
         }
         /* Finally, report the distance we've found or +INFINITY if there are no better paths */
-        return result.get(bestSink);
+        Double resultVal = result.get(bestSink);
+        return resultVal != null ? resultVal : Double.MAX_VALUE;
     }
 }
