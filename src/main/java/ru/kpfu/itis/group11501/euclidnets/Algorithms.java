@@ -109,7 +109,8 @@ public class Algorithms {
         }
 
         /* Finally, report the distance we've found. */
-        return result.get(sink);
+        Double resultVal = result.get(sink);
+        return resultVal != null ? resultVal : Double.MAX_VALUE;
     }
 
     public static Double shortestEuclidDijkstraFibonacciPathToManySinks(EuclidDirectedGraph graph,
