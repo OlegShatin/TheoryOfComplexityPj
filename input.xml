@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="1.8.0_60" class="java.beans.XMLDecoder">
- <object class="ru.kpfu.itis.group11501.euclidnets.structs.EuclidDirectedGraph" id="EuclidDirectedGraph0">
+ <object class="main.java.ru.kpfu.itis.group11501.euclidnets.structs.EuclidDirectedGraph" id="EuclidDirectedGraph0">
   <void property="map">
    <void method="put">
-    <object class="ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex" id="BoundsGraphVertex0">
+    <object class="main.java.ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex" id="BoundsGraphVertex0">
      <void property="name">
       <string>sink</string>
      </void>
@@ -17,7 +17,7 @@
     <object class="java.util.HashMap"/>
    </void>
    <void method="put">
-    <object class="ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex" id="BoundsGraphVertex1">
+    <object class="main.java.ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex" id="BoundsGraphVertex1">
      <void property="name">
       <string>sixNode - loop from five</string>
      </void>
@@ -30,7 +30,7 @@
     </object>
     <object class="java.util.HashMap">
      <void method="put">
-      <object class="ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex" id="BoundsGraphVertex2">
+      <object class="main.java.ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex" id="BoundsGraphVertex2">
        <void property="name">
         <string>sevenNode - loop from six to third</string>
        </void>
@@ -46,7 +46,7 @@
     </object>
    </void>
    <void method="put">
-    <object class="ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex" id="BoundsGraphVertex3">
+    <object class="main.java.ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex" id="BoundsGraphVertex3">
      <void property="name">
       <string>thirdNode</string>
      </void>
@@ -65,7 +65,7 @@
     </object>
    </void>
    <void method="put">
-    <object class="ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex">
+    <object class="main.java.ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex">
      <void property="name">
       <string>source</string>
      </void>
@@ -78,7 +78,7 @@
     </object>
     <object class="java.util.HashMap">
      <void method="put">
-      <object class="ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex" id="BoundsGraphVertex4">
+      <object class="main.java.ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex" id="BoundsGraphVertex4">
        <void property="name">
         <string>secondNode</string>
        </void>
@@ -101,7 +101,7 @@
       <double>10.0</double>
      </void>
      <void method="put">
-      <object class="ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex" id="BoundsGraphVertex5">
+      <object class="main.java.ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex" id="BoundsGraphVertex5">
        <void property="name">
         <string>fiveNode - loop from second</string>
        </void>

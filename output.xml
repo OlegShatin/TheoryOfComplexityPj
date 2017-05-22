@@ -2,63 +2,31 @@
 <java version="1.8.0_60" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
   <void method="add">
-   <object class="ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex">
+   <object class="main.java.ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex">
     <void property="name">
-     <string>source</string>
+     <string>7</string>
     </void>
     <void property="x">
-     <double>10.0</double>
+     <double>-514.0</double>
     </void>
     <void property="y">
-     <double>10.0</double>
+     <double>-745.0</double>
     </void>
    </object>
   </void>
   <void method="add">
-   <object class="ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex">
+   <object class="main.java.ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex">
     <void property="marked">
      <boolean>true</boolean>
     </void>
     <void property="name">
-     <string>secondNode</string>
+     <string>6</string>
     </void>
     <void property="x">
-     <double>10.0</double>
+     <double>431.0</double>
     </void>
     <void property="y">
-     <double>30.0</double>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex">
-    <void property="marked">
-     <boolean>true</boolean>
-    </void>
-    <void property="name">
-     <string>thirdNode</string>
-    </void>
-    <void property="x">
-     <double>10.0</double>
-    </void>
-    <void property="y">
-     <double>40.0</double>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex">
-    <void property="marked">
-     <boolean>true</boolean>
-    </void>
-    <void property="name">
-     <string>sink</string>
-    </void>
-    <void property="x">
-     <double>10.0</double>
-    </void>
-    <void property="y">
-     <double>50.0</double>
+     <double>-13.0</double>
     </void>
    </object>
   </void>
@@ -66,5 +34,5 @@
 </java>
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="1.8.0_60" class="java.beans.XMLDecoder">
- <double>40.0</double>
+ <double>1195.3447201539814</double>
 </java>

@@ -1,4 +1,4 @@
-package ru.kpfu.itis.group11501.euclidnets.structs;
+package main.java.ru.kpfu.itis.group11501.euclidnets.structs;
 /*****************************************************************************
  * File: main.java.ru.kpfu.itis.group11501.euclidnets.structs.DirectedGraph.java
  * Author: Keith Schwarz (htiek@cs.stanford.edu)

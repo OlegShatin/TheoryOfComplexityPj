@@ -1,8 +1,8 @@
-package ru.kpfu.itis.group11501.euclidnets;
+package main.java.ru.kpfu.itis.group11501.euclidnets;
 
 
-import ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex;
-import ru.kpfu.itis.group11501.euclidnets.structs.EuclidDirectedGraph;
+import main.java.ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex;
+import main.java.ru.kpfu.itis.group11501.euclidnets.structs.EuclidDirectedGraph;
 
 
 import java.util.ArrayList;
@@ -51,13 +51,30 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         //check all vetexes from graph #1 was saved
         for (BoundsGraphVertex vertex : graph2) {
             System.out.println(vertex.getX() + " " + vertex.getY());
         }
 
-        //select graph for prepairing and handling by algorhytm
-        EuclidDirectedGraph graph = graph1;
+        //select graph for preparing and handling by algorithm
+        GraphGenerator graphGenerator = new GraphGenerator();
+        EuclidDirectedGraph graph = graphGenerator.generateGraph();
+
+        try {
+            XMLSerializer.write(graph, "generated_graph.xml", false);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("*Graph generated successfully!");
+        System.out.println("*.......*");
+        System.out.println("*Number of sources: " + graphGenerator.getNumberOfSources() + "*");
+        System.out.println("*Number of sinks: " + graphGenerator.getNumberOfSinks() + "*");
+        System.out.println("*.......*");
+        System.out.println("*Working with algorithm*");
+
+        long time = System.currentTimeMillis();
         //find all sources and sinks
         ArrayList<BoundsGraphVertex> sources = new ArrayList<>();
         ArrayList<BoundsGraphVertex> sinks = new ArrayList<>();
@@ -108,7 +125,7 @@ public class Main {
         minLength = Double.MAX_VALUE;
         for (BoundsGraphVertex source :
                 sources) {
-            //need use path storage list because algorhytm returns only double val of length.
+            //need use path storage list because algorithm returns only double val of length.
             //path will be saved in this storage.
             List<BoundsGraphVertex> pathStorage = new ArrayList<>();
             //do algo
@@ -119,6 +136,12 @@ public class Main {
                 minPath = pathStorage;
             }
         }
+
+        /*
+        * Algorithm working time
+        */
+        System.out.println(System.currentTimeMillis() - time);
+
         try {
             XMLSerializer.write(minPath, "output.xml", false);
             XMLSerializer.write(minLength, "output.xml", true);
