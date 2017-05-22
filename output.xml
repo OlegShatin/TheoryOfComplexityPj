@@ -2,31 +2,31 @@
 <java version="1.8.0_60" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
   <void method="add">
-   <object class="main.java.ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex">
+   <object class="ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex">
     <void property="name">
-     <string>7</string>
+     <string>3</string>
     </void>
     <void property="x">
-     <double>-514.0</double>
+     <double>-424.0</double>
     </void>
     <void property="y">
-     <double>-745.0</double>
+     <double>805.0</double>
     </void>
    </object>
   </void>
   <void method="add">
-   <object class="main.java.ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex">
+   <object class="ru.kpfu.itis.group11501.euclidnets.structs.BoundsGraphVertex">
     <void property="marked">
      <boolean>true</boolean>
     </void>
     <void property="name">
-     <string>6</string>
+     <string>0</string>
     </void>
     <void property="x">
-     <double>431.0</double>
+     <double>-444.0</double>
     </void>
     <void property="y">
-     <double>-13.0</double>
+     <double>320.0</double>
     </void>
    </object>
   </void>
@@ -34,5 +34,5 @@
 </java>
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="1.8.0_60" class="java.beans.XMLDecoder">
- <double>1195.3447201539814</double>
+ <double>485.41219597368996</double>
 </java>

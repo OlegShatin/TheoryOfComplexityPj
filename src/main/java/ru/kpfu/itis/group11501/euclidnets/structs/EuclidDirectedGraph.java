@@ -1,4 +1,4 @@
-package main.java.ru.kpfu.itis.group11501.euclidnets.structs;
+package ru.kpfu.itis.group11501.euclidnets.structs;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
