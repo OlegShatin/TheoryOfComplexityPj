@@ -3,4 +3,4 @@ The project for theory of complexity - get algorhythm finding shortest path from
 ## how to contribute
 * pull repo
 * to compile use idea tools or maven command `mvn package`
-* to start use idea tools or maven command `java -jar target/TheoryOfComplexityPj-1.0-SNAPSHOT.jar`
+* to start use idea tools or maven command `java -jar target/euclidnets-1.0-SNAPSHOT.jar`
